@@ -1,0 +1,88 @@
+<form (ngSubmit)="handleSubmit()" class="space-y-4">
+  <div class="space-y-2">
+    <label for="name" class="text-sm font-mono text-gray-400">
+      NAME
+    </label>
+    <input
+      id="name"
+      name="name"
+      [(ngModel)]="formState.name"
+      required
+      [ngClass]="variant === 'dashboard'
+        ? 'bg-[#0a0b10] border-cyan-500/30 focus:border-pink-500'
+        : 'bg-gray-900/50 border-gray-800 focus:border-yellow-500'"
+      class="h-12 w-full px-3 py-2 rounded-md border focus:outline-none"
+      placeholder="Your name"
+    />
+  </div>
+
+  <div class="space-y-2">
+    <label for="email" class="text-sm font-mono text-gray-400">
+      EMAIL
+    </label>
+    <input
+      id="email"
+      name="email"
+      type="email"
+      [(ngModel)]="formState.email"
+      required
+      [ngClass]="variant === 'dashboard'
+        ? 'bg-[#0a0b10] border-cyan-500/30 focus:border-pink-500'
+        : 'bg-gray-900/50 border-gray-800 focus:border-yellow-500'"
+      class="h-12 w-full px-3 py-2 rounded-md border focus:outline-none"
+      placeholder="your.email@example.com"
+    />
+  </div>
+
+  <div class="space-y-2">
+    <label for="message" class="text-sm font-mono text-gray-400">
+      MESSAGE
+    </label>
+    <textarea
+      id="message"
+      name="message"
+      [(ngModel)]="formState.message"
+      required
+      [ngClass]="variant === 'dashboard'
+        ? 'bg-[#0a0b10] border-cyan-500/30 focus:border-pink-500'
+        : 'bg-gray-900/50 border-gray-800 focus:border-yellow-500'"
+      class="min-h-[120px] w-full px-3 py-2 rounded-md border focus:outline-none resize-none"
+      placeholder="Your message here..."
+    ></textarea>
+  </div>
+
+  <button
+    type="submit"
+    [disabled]="isSubmitting || isSubmitted"
+    [ngClass]="isSubmitted
+      ? 'bg-green-600 hover:bg-green-700'
+      : variant === 'dashboard'
+        ? 'bg-cyan-500 hover:bg-cyan-600'
+        : 'bg-yellow-500 hover:bg-yellow-600'"
+    class="w-full h-12 text-black font-medium rounded-md flex items-center justify-center"
+  >
+    <ng-container *ngIf="isSubmitting">
+      <svg
+        class="animate-spin -ml-1 mr-2 h-4 w-4 text-black"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path
+          class="opacity-75"
+          fill="currentColor"
+          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+        ></path>
+      </svg>
+      Processing...
+    </ng-container>
+    <ng-container *ngIf="isSubmitted">
+      Message Sent!
+    </ng-container>
+    <ng-container *ngIf="!isSubmitting && !isSubmitted">
+      <ng-icon name="lucideSend" class="w-4 h-4 mr-2"></ng-icon>
+      Send Message
+    </ng-container>
+  </button>
+</form>
