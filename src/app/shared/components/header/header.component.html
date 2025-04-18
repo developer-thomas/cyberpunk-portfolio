@@ -1,0 +1,167 @@
+<header
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+  [ngClass]="{'border-b border-cyan-500/30 bg-[#0a0b10]/80 backdrop-blur-md': scrollY > 50, 'bg-transparent': scrollY <= 50}"
+>
+  <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-2">
+      <div class="w-8 h-8 bg-cyan-500 relative overflow-hidden">
+        <div class="absolute inset-0 bg-pink-500 translate-x-1 -translate-y-1"></div>
+        <div class="absolute inset-0 bg-cyan-500 translate-x-0.5 -translate-y-0.5 flex items-center justify-center font-mono font-bold text-black">
+          TD
+        </div>
+      </div>
+      <app-glitch-text text="THOMAS_DEV" class="text-xl font-bold tracking-wider"></app-glitch-text>
+    </div>
+    
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex items-center gap-8 font-mono text-sm uppercase tracking-widest">
+      <a
+        href="#hero"
+        [ngClass]="{'text-pink-400': activeSection === 'hero', 'text-cyan-400': activeSection !== 'hero'}"
+        class="hover:text-pink-400 transition-colors relative group"
+        (click)="$event.preventDefault(); scrollToSection('hero')"
+      >
+        Home
+        <span
+          class="absolute -bottom-1 left-0 h-0.5 bg-pink-500 transition-all duration-300"
+          [ngClass]="{'w-full': activeSection === 'hero', 'w-0 group-hover:w-full': activeSection !== 'hero'}"
+        ></span>
+      </a>
+      <a
+        href="#dashboard"
+        [ngClass]="{'text-pink-400': activeSection === 'dashboard', 'text-cyan-400': activeSection !== 'dashboard'}"
+        class="hover:text-pink-400 transition-colors relative group"
+        (click)="$event.preventDefault(); scrollToSection('dashboard')"
+      >
+        Dashboard
+        <span
+          class="absolute -bottom-1 left-0 h-0.5 bg-pink-500 transition-all duration-300"
+          [ngClass]="{'w-full': activeSection === 'dashboard', 'w-0 group-hover:w-full': activeSection !== 'dashboard'}"
+        ></span>
+      </a>
+      <a
+        href="#about"
+        [ngClass]="{'text-pink-400': activeSection === 'about', 'text-cyan-400': activeSection !== 'about'}"
+        class="hover:text-pink-400 transition-colors relative group"
+        (click)="$event.preventDefault(); scrollToSection('about')"
+      >
+        About
+        <span
+          class="absolute -bottom-1 left-0 h-0.5 bg-pink-500 transition-all duration-300"
+          [ngClass]="{'w-full': activeSection === 'about', 'w-0 group-hover:w-full': activeSection !== 'about'}"
+        ></span>
+      </a>
+      <a
+        href="#projects"
+        [ngClass]="{'text-pink-400': activeSection === 'projects', 'text-cyan-400': activeSection !== 'projects'}"
+        class="hover:text-pink-400 transition-colors relative group"
+        (click)="$event.preventDefault(); scrollToSection('projects')"
+      >
+        Projects
+        <span
+          class="absolute -bottom-1 left-0 h-0.5 bg-pink-500 transition-all duration-300"
+          [ngClass]="{'w-full': activeSection === 'projects', 'w-0 group-hover:w-full': activeSection !== 'projects'}"
+        ></span>
+      </a>
+      <a
+        href="#skills"
+        [ngClass]="{'text-pink-400': activeSection === 'skills', 'text-cyan-400': activeSection !== 'skills'}"
+        class="hover:text-pink-400 transition-colors relative group"
+        (click)="$event.preventDefault(); scrollToSection('skills')"
+      >
+        Skills
+        <span
+          class="absolute -bottom-1 left-0 h-0.5 bg-pink-500 transition-all duration-300"
+          [ngClass]="{'w-full': activeSection === 'skills', 'w-0 group-hover:w-full': activeSection !== 'skills'}"
+        ></span>
+      </a>
+      <a
+        href="#contact"
+        [ngClass]="{'text-pink-400': activeSection === 'contact', 'text-cyan-400': activeSection !== 'contact'}"
+        class="hover:text-pink-400 transition-colors relative group"
+        (click)="$event.preventDefault(); scrollToSection('contact')"
+      >
+        Contact
+        <span
+          class="absolute -bottom-1 left-0 h-0.5 bg-pink-500 transition-all duration-300"
+          [ngClass]="{'w-full': activeSection === 'contact', 'w-0 group-hover:w-full': activeSection !== 'contact'}"
+        ></span>
+      </a>
+    </nav>
+    
+    <!-- Mobile Menu Button -->
+    <button 
+      class="md:hidden text-cyan-400 hover:text-pink-400 transition-colors"
+      (click)="toggleMenu()"
+    >
+      <ng-icon [name]="isMenuOpen ? 'lucideX' : 'lucideMenu'" class="w-6 h-6"></ng-icon>
+    </button>
+    
+    <!-- Resume Button -->
+    <button class="hidden md:block border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-4 py-2 rounded-md border">
+      Resume
+    </button>
+  </div>
+  
+  <!-- Mobile Navigation Menu -->
+  <div 
+    class="md:hidden absolute top-full left-0 right-0 bg-[#0a0b10]/95 backdrop-blur-md border-b border-cyan-500/30 transition-all duration-300 overflow-hidden"
+    [ngClass]="{'max-h-screen py-4': isMenuOpen, 'max-h-0': !isMenuOpen}"
+  >
+    <div class="container mx-auto px-4">
+      <nav class="flex flex-col gap-4 font-mono text-sm uppercase tracking-widest">
+        <a
+          href="#hero"
+          [ngClass]="{'text-pink-400': activeSection === 'hero', 'text-cyan-400': activeSection !== 'hero'}"
+          class="py-2 hover:text-pink-400 transition-colors"
+          (click)="$event.preventDefault(); scrollToSection('hero')"
+        >
+          Home
+        </a>
+        <a
+          href="#dashboard"
+          [ngClass]="{'text-pink-400': activeSection === 'dashboard', 'text-cyan-400': activeSection !== 'dashboard'}"
+          class="py-2 hover:text-pink-400 transition-colors"
+          (click)="$event.preventDefault(); scrollToSection('dashboard')"
+        >
+          Dashboard
+        </a>
+        <a
+          href="#about"
+          [ngClass]="{'text-pink-400': activeSection === 'about', 'text-cyan-400': activeSection !== 'about'}"
+          class="py-2 hover:text-pink-400 transition-colors"
+          (click)="$event.preventDefault(); scrollToSection('about')"
+        >
+          About
+        </a>
+        <a
+          href="#projects"
+          [ngClass]="{'text-pink-400': activeSection === 'projects', 'text-cyan-400': activeSection !== 'projects'}"
+          class="py-2 hover:text-pink-400 transition-colors"
+          (click)="$event.preventDefault(); scrollToSection('projects')"
+        >
+          Projects
+        </a>
+        <a
+          href="#skills"
+          [ngClass]="{'text-pink-400': activeSection === 'skills', 'text-cyan-400': activeSection !== 'skills'}"
+          class="py-2 hover:text-pink-400 transition-colors"
+          (click)="$event.preventDefault(); scrollToSection('skills')"
+        >
+          Skills
+        </a>
+        <a
+          href="#contact"
+          [ngClass]="{'text-pink-400': activeSection === 'contact', 'text-cyan-400': activeSection !== 'contact'}"
+          class="py-2 hover:text-pink-400 transition-colors"
+          (click)="$event.preventDefault(); scrollToSection('contact')"
+        >
+          Contact
+        </a>
+        <button class="mt-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-4 py-2 rounded-md border self-start">
+          Resume
+        </button>
+      </nav>
+    </div>
+  </div>
+</header>
