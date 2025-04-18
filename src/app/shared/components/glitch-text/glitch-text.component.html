@@ -1,0 +1,11 @@
+<span
+      class="inline-block font-mono relative transition-colors"
+      [ngClass]="[className, isHovering ? 'text-yellow-500' : '']"
+      (mouseenter)="handleMouseEnter()"
+      (mouseleave)="handleMouseLeave()"
+    >
+      {{ displayText }}
+      <span *ngIf="isAnimating" class="absolute left-0 top-0 w-full h-full mix-blend-difference opacity-50 pointer-events-none">
+        {{ text }}
+      </span>
+    </span>
