@@ -1,0 +1,150 @@
+<section class="py-20 md:py-24 relative">
+  <div class="absolute inset-0 bg-[#0a0b10]/80 z-0"></div>
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="flex flex-col gap-2 mb-8 reveal-animation">
+      <div class="flex items-center gap-2 mb-6 reveal-animation">
+        <div class="w-2 h-6 bg-pink-500"></div>
+        <h2 class="text-2xl md:text-3xl font-bold">
+          <app-glitch-text text="DASHBOARD"></app-glitch-text>
+        </h2>
+      </div>
+      <p class="text-gray-400">Front-end Developer | Back-end Developer | Full-stack Developer</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+      <div *ngFor="let stat of stats; let i = index" class="reveal-animation" [style.animation-delay]="0.1 * (i + 1) + 's'">
+        <app-stat-card
+          [title]="stat.title"
+          [value]="stat.value"
+          [trend]="stat.trend"
+          [trendUp]="stat.trendUp"
+        >
+          <ng-icon [name]="stat.icon" class="w-5 h-5"></ng-icon>
+        </app-stat-card>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 bg-[#0f1119] border border-cyan-500/30 rounded-lg p-5 shadow-glow-sm reveal-animation" style="animation-delay: 0.5s">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-xl font-bold text-cyan-400">Featured Project</h2>
+          <div class="text-xs font-mono text-cyan-400 border border-cyan-500/30 px-2 py-1 rounded bg-cyan-500/5">
+            LATEST
+          </div>
+        </div>
+        <div class="relative h-48 md:h-64 mb-4 overflow-hidden rounded-md">
+          <img src="assets/images/neon-city-dashboard.png" alt="Featured project" class="object-cover w-full h-full" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#0f1119] to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4">
+            <h3 class="text-xl font-bold text-white mb-1">Neon Dashboard</h3>
+            <p class="text-sm text-gray-300">
+              A cyberpunk-inspired admin dashboard with dark mode and data visualization.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-xs px-2 py-1 bg-cyan-500/10 text-cyan-400 font-mono rounded">React</span>
+          <span class="text-xs px-2 py-1 bg-cyan-500/10 text-cyan-400 font-mono rounded">Chart.js</span>
+          <span class="text-xs px-2 py-1 bg-cyan-500/10 text-cyan-400 font-mono rounded">Tailwind</span>
+        </div>
+        <div class="flex gap-3">
+          <button class="bg-cyan-500 hover:bg-cyan-600 text-black px-4 py-2 rounded-md text-sm">
+            View Project
+          </button>
+          <button class="border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 border px-4 py-2 rounded-md text-sm flex items-center">
+            <ng-icon name="lucideGithub" class="w-4 h-4 mr-2"></ng-icon>
+            Source Code
+          </button>
+        </div>
+      </div>
+
+      <div class="bg-[#0f1119] border border-cyan-500/30 rounded-lg p-5 shadow-glow-sm reveal-animation" style="animation-delay: 0.6s">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-xl font-bold text-cyan-400">Developer Status</h2>
+          <div class="flex items-center gap-2">
+            <span class="inline-block w-2 h-2 rounded-full bg-green-500 pulse-animation"></span>
+            <span class="text-xs text-green-500">ONLINE</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 mb-6">
+          <div class="relative w-20 h-20 rounded-lg overflow-hidden border-2 border-cyan-500">
+            <img src="assets/me-cyberpunk.png" alt="Developer" class="object-cover w-full h-full" />
+          </div>
+          <div>
+            <h3 class="text-lg font-bold">CYBER_DEV</h3>
+            <p class="text-sm text-gray-400">Front-end Developer</p>
+            <div class="flex gap-2 mt-2">
+              <a href="https://github.com" target="_blank" class="text-gray-400 hover:text-cyan-400">
+                <ng-icon name="lucideGithub" class="w-4 h-4"></ng-icon>
+              </a>
+              <a href="https://linkedin.com" target="_blank" class="text-gray-400 hover:text-cyan-400">
+                <ng-icon name="lucideLinkedin" class="w-4 h-4"></ng-icon>
+              </a>
+              <a href="https://twitter.com" target="_blank" class="text-gray-400 hover:text-cyan-400">
+                <ng-icon name="lucideTwitter" class="w-4 h-4"></ng-icon>
+              </a>
+              <a href="https://example.com" target="_blank" class="text-gray-400 hover:text-cyan-400">
+                <ng-icon name="lucideGlobe" class="w-4 h-4"></ng-icon>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-gray-400">Availability</span>
+              <span class="text-cyan-400">85%</span>
+            </div>
+            <div class="h-1.5 bg-gray-800 rounded-full overflow-hidden">
+              <div
+                class="h-full bg-cyan-500 rounded-full animate-progress"
+                style="width: 0%; --end-width: 85%"
+              ></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-gray-400">Response Time</span>
+              <span class="text-cyan-400">92%</span>
+            </div>
+            <div class="h-1.5 bg-gray-800 rounded-full overflow-hidden">
+              <div
+                class="h-full bg-cyan-500 rounded-full animate-progress"
+                style="width: 0%; --end-width: 92%; animation-delay: 0.2s"
+              ></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1">
+              <span class="text-gray-400">Project Capacity</span>
+              <span class="text-cyan-400">70%</span>
+            </div>
+            <div class="h-1.5 bg-gray-800 rounded-full overflow-hidden">
+              <div
+                class="h-full bg-cyan-500 rounded-full animate-progress"
+                style="width: 0%; --end-width: 70%; animation-delay: 0.4s"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <button class="w-full mt-6 bg-cyan-500 hover:bg-cyan-600 text-black px-4 py-2 rounded-md flex items-center justify-center">
+          <ng-icon name="lucideMail" class="w-4 h-4 mr-2"></ng-icon>
+          Contact Now
+        </button>
+      </div>
+    </div>
+
+    <div class="flex justify-center mt-8">
+      <button
+        class="flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
+        (click)="scrollToAbout()"
+      >
+        <span>Scroll for more</span>
+        <ng-icon name="lucideChevronDown" class="w-5 h-5 animate-bounce"></ng-icon>
+      </button>
+    </div>
+  </div>
+</section>
