@@ -1,0 +1,91 @@
+<div class="w-full min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+  <!-- Particle canvas background -->
+  <canvas #canvas class="absolute inset-0 z-0"></canvas>
+
+  <!-- Overlay gradient -->
+  <div class="absolute inset-0 bg-gradient-radial from-transparent to-[#0a0b10] z-10"></div>
+
+  <!-- Content -->
+  <div class="container mx-auto px-4 z-20 relative">
+    <div class="max-w-4xl mx-auto text-center">
+      <!-- Animated loading bar -->
+      <div
+        class="w-32 h-1 bg-gray-800 mx-auto mb-8 overflow-hidden transition-opacity duration-1000"
+        [ngClass]="{'opacity-0': isLoaded, 'opacity-100': !isLoaded}"
+      >
+        <div class="h-full bg-cyan-500 animate-loading-bar"></div>
+      </div>
+
+      <!-- Main title with glitch effect -->
+      <div
+        class="transition-all duration-1000 transform"
+        [ngClass]="{'translate-y-0 opacity-100': isLoaded, 'translate-y-10 opacity-0': !isLoaded}"
+      >
+        <h1 class="text-5xl md:text-7xl font-bold mb-4 glitch-text" data-text="THOMAS_DEV">
+          <span class="text-white">THOMAS</span>
+          <span class="text-pink-500">_DEV</span>
+        </h1>
+
+        <div class="h-16 mb-6">
+          <app-typewriter-effect [words]="typewriterWords"></app-typewriter-effect>
+        </div>
+
+        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          Creating cutting-edge digital experiences with code. Specializing in modern front-end development and
+          interactive web applications.
+        </p>
+
+        <!-- Tech icons -->
+        <div class="flex justify-center gap-8 mb-12">
+          <div
+            *ngFor="let item of icons; let i = index"
+            class="flex flex-col items-center transition-all duration-500"
+            [ngClass]="{'text-cyan-400 scale-110': i === activeIcon, 'text-gray-500 scale-100': i !== activeIcon}"
+          >
+            <button
+              class="w-12 h-12 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300"
+              [ngClass]="{'bg-cyan-500/10 border border-cyan-500/30': i === activeIcon}"
+            >
+              <ng-icon [name]="item.icon" class="w-6 h-6"></ng-icon>
+            </button>
+            <span class="text-xs mt-2">{{ item.label }}</span>
+          </div>
+        </div>
+
+        <!-- CTA buttons -->
+        <div class="flex flex-wrap justify-center gap-4">
+          <button
+            class="bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-black font-medium px-8 py-6 h-auto relative overflow-hidden group rounded-md"
+            (click)="onExplore()"
+          >
+            <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-pink-500 to-pink-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+            <span class="relative z-10 group-hover:text-white transition-colors duration-300">
+              Explore Dashboard
+            </span>
+          </button>
+
+          <button
+            class="border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 font-medium px-8 py-6 h-auto rounded-md border"
+          >
+            View Projects
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div
+    class="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 transition-all duration-1000"
+    [ngClass]="{'opacity-100': isLoaded, 'opacity-0': !isLoaded}"
+  >
+    <button class="flex flex-col items-center gap-2 text-cyan-400 hover:text-cyan-300" (click)="onExplore()">
+      <span class="text-sm">Scroll Down</span>
+      <ng-icon name="lucideChevronDown" class="w-6 h-6 animate-bounce"></ng-icon>
+    </button>
+  </div>
+
+  <!-- Decorative elements -->
+  <div class="absolute top-1/4 -left-20 w-40 h-40 bg-cyan-500/20 rounded-full blur-3xl z-0"></div>
+  <div class="absolute bottom-1/4 -right-20 w-40 h-40 bg-pink-500/20 rounded-full blur-3xl z-0"></div>
+</div>
