@@ -1,0 +1,21 @@
+<div #barContainer class="space-y-2">
+  <div class="flex justify-between items-center">
+    <span class="text-sm font-mono">{{ name }}</span>
+    <span class="text-sm font-mono">{{ percentage }}%</span>
+  </div>
+  <div class="h-2 w-full bg-gray-800 relative overflow-hidden rounded-full">
+    <div
+      class="h-full absolute left-0 top-0 transition-all duration-1000 ease-out rounded-full"
+      [ngClass]="{
+        'bg-cyan-500': color === 'cyan',
+        'bg-pink-500': color === 'pink',
+        'bg-yellow-500': color === 'yellow'
+      }"
+      [style.width.%]="width"
+    >
+      <div class="absolute inset-0 opacity-30">
+        <div class="h-full w-full bg-grid-pattern"></div>
+      </div>
+    </div>
+  </div>
+</div>
