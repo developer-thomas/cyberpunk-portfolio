@@ -3,7 +3,7 @@
     <div class="flex items-center gap-2 mb-6 reveal-animation">
       <div class="w-2 h-6 bg-pink-500"></div>
       <h2 class="text-2xl md:text-3xl font-bold">
-        <app-glitch-text text="PROJECTS"></app-glitch-text>
+        <app-glitch-text [text]="'projects.title' | translate"></app-glitch-text>
       </h2>
     </div>
 
@@ -11,10 +11,10 @@
       <div class="flex justify-between items-center mb-6">
         <div class="flex items-center gap-3">
           <ng-icon name="lucideCode" class="w-5 h-5 text-pink-500"></ng-icon>
-          <h3 class="text-xl font-bold">Project Database</h3>
+          <h3 class="text-xl font-bold">{{ 'projects.database' | translate }}</h3>
         </div>
         <div class="text-xs font-mono text-cyan-400 border border-cyan-500/30 px-2 py-1 rounded bg-cyan-500/5">
-          {{ currentTime.getFullYear() }} COLLECTION
+          {{ currentTime.getFullYear() }} {{ 'projects.collection' | translate }}
         </div>
       </div>
 
@@ -33,7 +33,7 @@
 
     <div class="flex justify-center reveal-animation" style="animation-delay: 0.7s">
       <button class="border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 border px-4 py-2 rounded-md">
-        View All Projects
+        {{ 'projects.viewAll' | translate }}
       </button>
     </div>
   </div>

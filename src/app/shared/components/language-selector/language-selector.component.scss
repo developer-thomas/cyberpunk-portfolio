@@ -1,0 +1,41 @@
+.language-selector {
+  position: relative;
+  
+  &-button {
+    user-select: none;
+    
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(8, 145, 178, 0.5);
+    }
+  }
+  
+  &-dropdown {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    
+    button {
+      &:focus {
+        outline: none;
+        background-color: rgba(8, 145, 178, 0.1);
+      }
+    }
+  }
+}
+
+// Animation for dropdown
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.language-selector-dropdown {
+  &.opacity-100 {
+    animation: dropdownFadeIn 0.2s ease-out;
+  }
+}

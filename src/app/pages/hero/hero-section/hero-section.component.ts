@@ -3,6 +3,7 @@ import { AfterViewInit, Component, ElementRef, EventEmitter, OnDestroy, OnInit, 
 import { NgIcon } from '@ng-icons/core';
 import { TypewriterEffectComponent } from '../../../shared/components/typewriter-effect/typewriter-effect.component';
 import { LucideAngularModule } from 'lucide-angular';
+import { TranslatePipe } from '../../../shared/pipes/translate.pipe';
 
 interface Particle {
   x: number
@@ -17,7 +18,7 @@ interface Particle {
 
 @Component({
   selector: 'app-hero-section',
-  imports: [CommonModule, TypewriterEffectComponent, NgIcon, LucideAngularModule],
+  imports: [CommonModule, TypewriterEffectComponent, NgIcon, LucideAngularModule, TranslatePipe],
   templateUrl: './hero-section.component.html',
   styleUrl: './hero-section.component.scss',
 })

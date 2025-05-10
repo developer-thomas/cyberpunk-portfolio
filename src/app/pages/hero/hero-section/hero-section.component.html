@@ -31,8 +31,7 @@
         </div>
 
         <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-          Creating cutting-edge digital experiences with code. Specializing in modern front-end development and
-          interactive web applications.
+          {{ 'hero.subtitle' | translate }}
         </p>
 
         <!-- Tech icons -->
@@ -42,12 +41,12 @@
             class="flex flex-col items-center transition-all duration-500"
             [ngClass]="{'text-cyan-400 scale-110': i === activeIcon, 'text-gray-500 scale-100': i !== activeIcon}"
           >
-            <button
-              class="w-12 h-12 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300"
+            <div
+              class="w-12 h-12 rounded-lg flex items-center justify-center"
               [ngClass]="{'bg-cyan-500/10 border border-cyan-500/30': i === activeIcon}"
             >
               <ng-icon [name]="item.icon" class="w-6 h-6"></ng-icon>
-            </button>
+            </div>
             <span class="text-xs mt-2">{{ item.label }}</span>
           </div>
         </div>
@@ -60,14 +59,14 @@
           >
             <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-pink-500 to-pink-600 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
             <span class="relative z-10 group-hover:text-white transition-colors duration-300">
-              Explore Dashboard
+              {{ 'hero.cta.explore' | translate }}
             </span>
           </button>
 
           <button
             class="border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 font-medium px-8 py-6 h-auto rounded-md border"
           >
-            View Projects
+            {{ 'hero.cta.projects' | translate }}
           </button>
         </div>
       </div>
@@ -80,7 +79,7 @@
     [ngClass]="{'opacity-100': isLoaded, 'opacity-0': !isLoaded}"
   >
     <button class="flex flex-col items-center gap-2 text-cyan-400 hover:text-cyan-300" (click)="onExplore()">
-      <span class="text-sm">Scroll Down</span>
+      <span class="text-sm">{{ 'hero.scroll' | translate }}</span>
       <ng-icon name="lucideChevronDown" class="w-6 h-6 animate-bounce"></ng-icon>
     </button>
   </div>

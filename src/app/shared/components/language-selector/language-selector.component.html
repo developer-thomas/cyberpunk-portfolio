@@ -1,0 +1,32 @@
+<div class="relative language-selector">
+  <button 
+    class="flex items-center gap-2 px-3 py-2 rounded-md border border-cyan-500/30 bg-[#0a0b10] hover:bg-[#0f1119] transition-colors language-selector-button"
+    (click)="toggleDropdown($event)"
+    aria-haspopup="true"
+    [attr.aria-expanded]="isOpen"
+  >
+    <img [src]="getLanguageFlag(currentLanguage)">
+    <span class="text-sm hidden sm:inline">{{ currentLanguage | uppercase }}</span>
+    <ng-icon name="lucideChevronDown" class="w-4 h-4 text-gray-400 transition-transform" [ngClass]="{'rotate-180': isOpen}"></ng-icon>
+  </button>
+
+  <div 
+    class="absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-[#0f1119] border border-cyan-500/30 overflow-hidden transition-all duration-200 z-50 language-selector-dropdown"
+    [ngClass]="{'opacity-100 translate-y-0': isOpen, 'opacity-0 -translate-y-2 pointer-events-none': !isOpen}"
+  >
+    <div class="py-1">
+      <button 
+        *ngFor="let lang of languages"
+        class="flex items-center justify-between gap-3 w-full px-4 py-2 text-sm text-left hover:bg-cyan-500/10 transition-colors"
+        [ngClass]="{'bg-cyan-500/5 text-cyan-400': currentLanguage === lang.code, 'text-gray-300': currentLanguage !== lang.code}"
+        (click)="setLanguage(lang.code)"
+      >
+        <div class="flex items-center gap-3">
+          <img [src]="lang.image">
+          <span>{{ lang.name | translate }}</span>
+        </div>
+        <ng-icon *ngIf="currentLanguage === lang.code" name="lucideCheck" class="w-4 h-4 text-cyan-400"></ng-icon>
+      </button>
+    </div>
+  </div>
+</div>

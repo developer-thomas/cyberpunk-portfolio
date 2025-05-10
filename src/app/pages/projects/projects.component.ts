@@ -1,16 +1,17 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgIcon } from '@ng-icons/core';
 import { GlitchTextComponent } from '../../shared/components/glitch-text/glitch-text.component';
 import { ProjectCardComponent } from '../../shared/components/project-card/project-card.component';
+import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 
 @Component({
   selector: 'app-projects-page',
-  imports: [CommonModule, NgIcon, GlitchTextComponent, ProjectCardComponent],
+  imports: [CommonModule, NgIcon, GlitchTextComponent, ProjectCardComponent, TranslatePipe],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })
-export class ProjectsPageComponent {
+export class ProjectsPageComponent implements OnInit{
   currentTime = new Date()
 
   // Projects data
@@ -58,4 +59,8 @@ export class ProjectsPageComponent {
       variant: "dashboard",
     },
   ]
+
+  constructor() {}
+
+  ngOnInit(): void {}
 }

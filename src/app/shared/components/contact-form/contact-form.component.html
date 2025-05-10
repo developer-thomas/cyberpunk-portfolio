@@ -1,7 +1,7 @@
 <form (ngSubmit)="handleSubmit()" class="space-y-4">
   <div class="space-y-2">
     <label for="name" class="text-sm font-mono text-gray-400">
-      NAME
+      {{ 'contact.form.name' | translate }}
     </label>
     <input
       id="name"
@@ -18,7 +18,7 @@
 
   <div class="space-y-2">
     <label for="email" class="text-sm font-mono text-gray-400">
-      EMAIL
+      {{ 'contact.form.email' | translate }}
     </label>
     <input
       id="email"
@@ -36,7 +36,7 @@
 
   <div class="space-y-2">
     <label for="message" class="text-sm font-mono text-gray-400">
-      MESSAGE
+      {{ 'contact.form.message' | translate }}
     </label>
     <textarea
       id="message"
@@ -75,14 +75,14 @@
           d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
         ></path>
       </svg>
-      Processing...
+      {{ 'contact.form.processing' | translate }}
     </ng-container>
     <ng-container *ngIf="isSubmitted">
-      Message Sent!
+      {{ 'contact.form.sent' | translate }}
     </ng-container>
     <ng-container *ngIf="!isSubmitting && !isSubmitted">
       <ng-icon name="lucideSend" class="w-4 h-4 mr-2"></ng-icon>
-      Send Message
+      {{ 'contact.form.send' | translate }}
     </ng-container>
   </button>
 </form>

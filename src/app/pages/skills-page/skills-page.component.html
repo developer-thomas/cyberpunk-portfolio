@@ -3,7 +3,7 @@
     <div class="flex items-center gap-2 mb-6 reveal-animation">
       <div class="w-2 h-6 bg-cyan-500"></div>
       <h2 class="text-2xl md:text-3xl font-bold">
-        <app-glitch-text text="SKILLS"></app-glitch-text>
+        <app-glitch-text [text]="'skills.title' | translate"></app-glitch-text>
       </h2>
     </div>
 
@@ -11,7 +11,7 @@
       <div class="bg-[#0f1119] border border-cyan-500/30 rounded-lg p-6 shadow-glow-sm reveal-animation" style="animation-delay: 0.1s">
         <div class="flex items-center gap-3 mb-4">
           <ng-icon name="lucideActivity" class="w-5 h-5 text-cyan-500"></ng-icon>
-          <h3 class="text-xl font-bold text-cyan-400">TECHNICAL SKILLS</h3>
+          <h3 class="text-xl font-bold text-cyan-400">{{ 'skills.technical' | translate }}</h3>
         </div>
 
         <div class="space-y-6">
@@ -26,7 +26,7 @@
       <div class="bg-[#0f1119] border border-cyan-500/30 rounded-lg p-6 shadow-glow-sm reveal-animation" style="animation-delay: 0.3s">
         <div class="flex items-center gap-3 mb-4">
           <ng-icon name="lucideTerminal" class="w-5 h-5 text-pink-500"></ng-icon>
-          <h3 class="text-xl font-bold text-cyan-400">TOOLS & PLATFORMS</h3>
+          <h3 class="text-xl font-bold text-cyan-400">{{ 'skills.tools' | translate }}</h3>
         </div>
 
         <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
@@ -45,7 +45,7 @@
     <div class="mt-8 bg-[#0f1119] border border-cyan-500/30 rounded-lg p-6 shadow-glow-sm reveal-animation" style="animation-delay: 0.5s">
       <div class="flex items-center gap-3 mb-6">
         <ng-icon name="lucideGlobe" class="w-5 h-5 text-cyan-500"></ng-icon>
-        <h3 class="text-xl font-bold text-cyan-400">SKILL METRICS</h3>
+        <h3 class="text-xl font-bold text-cyan-400">{{ 'skills.metrics' | translate }}</h3>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -60,9 +60,9 @@
               [ngClass]="metric.color === 'cyan' ? 'text-cyan-400' : 'text-pink-400'"
               [attr.data-target]="metric.value"
             >
-            {{ metric.value }}
+              {{ metric.value }}
             </div>
-            <div class="text-sm text-gray-400">{{ metric.label }}</div>
+            <div class="text-sm text-gray-400">{{ metric.label | translate }}</div>
           </div>
         </div>
       </div>

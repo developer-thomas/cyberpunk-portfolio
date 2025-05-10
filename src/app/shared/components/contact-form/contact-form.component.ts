@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { FormsModule } from "@angular/forms"
 import { NgIcon } from '@ng-icons/core';
+import { TranslatePipe } from '../../pipes/translate.pipe';
 
 interface FormState {
   name: string
@@ -11,7 +12,7 @@ interface FormState {
 
 @Component({
   selector: 'app-contact-form',
-  imports: [CommonModule, FormsModule, NgIcon],
+  imports: [CommonModule, FormsModule, NgIcon, TranslatePipe],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss'
 })

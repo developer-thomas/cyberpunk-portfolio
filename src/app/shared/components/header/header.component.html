@@ -21,7 +21,7 @@
         class="hover:text-pink-400 transition-colors relative group"
         (click)="$event.preventDefault(); scrollToSection('hero')"
       >
-        Home
+        {{ 'nav.home' | translate }}
         <span
           class="absolute -bottom-1 left-0 h-0.5 bg-pink-500 transition-all duration-300"
           [ngClass]="{'w-full': activeSection === 'hero', 'w-0 group-hover:w-full': activeSection !== 'hero'}"
@@ -33,7 +33,7 @@
         class="hover:text-pink-400 transition-colors relative group"
         (click)="$event.preventDefault(); scrollToSection('dashboard')"
       >
-        Dashboard
+        {{ 'nav.dashboard' | translate }}
         <span
           class="absolute -bottom-1 left-0 h-0.5 bg-pink-500 transition-all duration-300"
           [ngClass]="{'w-full': activeSection === 'dashboard', 'w-0 group-hover:w-full': activeSection !== 'dashboard'}"
@@ -45,7 +45,7 @@
         class="hover:text-pink-400 transition-colors relative group"
         (click)="$event.preventDefault(); scrollToSection('about')"
       >
-        About
+        {{ 'nav.about' | translate }}
         <span
           class="absolute -bottom-1 left-0 h-0.5 bg-pink-500 transition-all duration-300"
           [ngClass]="{'w-full': activeSection === 'about', 'w-0 group-hover:w-full': activeSection !== 'about'}"
@@ -57,7 +57,7 @@
         class="hover:text-pink-400 transition-colors relative group"
         (click)="$event.preventDefault(); scrollToSection('projects')"
       >
-        Projects
+        {{ 'nav.projects' | translate }}
         <span
           class="absolute -bottom-1 left-0 h-0.5 bg-pink-500 transition-all duration-300"
           [ngClass]="{'w-full': activeSection === 'projects', 'w-0 group-hover:w-full': activeSection !== 'projects'}"
@@ -69,7 +69,7 @@
         class="hover:text-pink-400 transition-colors relative group"
         (click)="$event.preventDefault(); scrollToSection('skills')"
       >
-        Skills
+        {{ 'nav.skills' | translate }}
         <span
           class="absolute -bottom-1 left-0 h-0.5 bg-pink-500 transition-all duration-300"
           [ngClass]="{'w-full': activeSection === 'skills', 'w-0 group-hover:w-full': activeSection !== 'skills'}"
@@ -81,7 +81,7 @@
         class="hover:text-pink-400 transition-colors relative group"
         (click)="$event.preventDefault(); scrollToSection('contact')"
       >
-        Contact
+        {{ 'nav.contact' | translate }}
         <span
           class="absolute -bottom-1 left-0 h-0.5 bg-pink-500 transition-all duration-300"
           [ngClass]="{'w-full': activeSection === 'contact', 'w-0 group-hover:w-full': activeSection !== 'contact'}"
@@ -89,18 +89,23 @@
       </a>
     </nav>
     
-    <!-- Mobile Menu Button -->
-    <button 
-      class="md:hidden text-cyan-400 hover:text-pink-400 transition-colors"
-      (click)="toggleMenu()"
-    >
-      <ng-icon [name]="isMenuOpen ? 'lucideX' : 'lucideMenu'" class="w-6 h-6"></ng-icon>
-    </button>
-    
-    <!-- Resume Button -->
-    <button class="hidden md:block border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-4 py-2 rounded-md border">
-      Resume
-    </button>
+    <div class="flex items-center gap-3">
+      <!-- Language Selector -->
+      <app-language-selector></app-language-selector>
+      
+      <!-- Mobile Menu Button -->
+      <button 
+        class="md:hidden text-cyan-400 hover:text-pink-400 transition-colors"
+        (click)="toggleMenu()"
+      >
+        <ng-icon [name]="isMenuOpen ? 'lucideX' : 'lucideMenu'" class="w-6 h-6"></ng-icon>
+      </button>
+      
+      <!-- Resume Button -->
+      <button class="hidden md:block border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-4 py-2 rounded-md border">
+        {{ 'nav.resume' | translate }}
+      </button>
+    </div>
   </div>
   
   <!-- Mobile Navigation Menu -->
@@ -116,7 +121,7 @@
           class="py-2 hover:text-pink-400 transition-colors"
           (click)="$event.preventDefault(); scrollToSection('hero')"
         >
-          Home
+          {{ 'nav.home' | translate }}
         </a>
         <a
           href="#dashboard"
@@ -124,15 +129,16 @@
           class="py-2 hover:text-pink-400 transition-colors"
           (click)="$event.preventDefault(); scrollToSection('dashboard')"
         >
-          Dashboard
+          {{ 'nav.dashboard' | translate }}
         </a>
         <a
           href="#about"
           [ngClass]="{'text-pink-400': activeSection === 'about', 'text-cyan-400': activeSection !== 'about'}"
           class="py-2 hover:text-pink-400 transition-colors"
+          class="py-2 hover:text-pink-400 transition-colors"
           (click)="$event.preventDefault(); scrollToSection('about')"
         >
-          About
+          {{ 'nav.about' | translate }}
         </a>
         <a
           href="#projects"
@@ -140,7 +146,7 @@
           class="py-2 hover:text-pink-400 transition-colors"
           (click)="$event.preventDefault(); scrollToSection('projects')"
         >
-          Projects
+          {{ 'nav.projects' | translate }}
         </a>
         <a
           href="#skills"
@@ -148,7 +154,7 @@
           class="py-2 hover:text-pink-400 transition-colors"
           (click)="$event.preventDefault(); scrollToSection('skills')"
         >
-          Skills
+          {{ 'nav.skills' | translate }}
         </a>
         <a
           href="#contact"
@@ -156,10 +162,10 @@
           class="py-2 hover:text-pink-400 transition-colors"
           (click)="$event.preventDefault(); scrollToSection('contact')"
         >
-          Contact
+          {{ 'nav.contact' | translate }}
         </a>
         <button class="mt-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 px-4 py-2 rounded-md border self-start">
-          Resume
+          {{ 'nav.resume' | translate }}
         </button>
       </nav>
     </div>
