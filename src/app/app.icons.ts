@@ -17,7 +17,9 @@ import {
   lucideArrowDown,
   lucideServer,
   lucideArrowUp,
-  lucideInstagram
+  lucideInstagram,
+  lucideMenu,
+  lucideCheck
 } from '@ng-icons/lucide';
 
 export const icons = provideIcons({
@@ -38,7 +40,9 @@ export const icons = provideIcons({
   lucideArrowDown,
   lucideServer,
   lucideArrowUp,
-  lucideInstagram
+  lucideInstagram,
+  lucideMenu,
+  lucideCheck
 
 });
 
