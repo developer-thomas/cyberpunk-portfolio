@@ -17,7 +17,8 @@ export class EmailService {
       });
 
       if (!response.ok) {
-        throw new Error(await response.text());
+        const errorText = await response.text();
+        throw new Error(errorText);
       }
     }
   }
@@ -31,7 +32,8 @@ export class EmailService {
       });
 
       if (!response.ok) {
-        throw new Error(await response.text());
+        const errorText = await response.text();
+        throw new Error(errorText);
       }
     }
   }

@@ -3,8 +3,6 @@ import { Component, inject, Input } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from "@angular/forms"
 import { NgIcon } from '@ng-icons/core';
 import { TranslatePipe } from '../../pipes/translate.pipe';
-import emailjs from '@emailjs/browser';
-import { environment } from '../../../../environments/environment.prod'
 import { EmailService } from '../../services/email.service';
 
 interface FormState {
@@ -22,8 +20,6 @@ interface FormState {
 export class ContactFormComponent {
   public fb = inject(FormBuilder);
   private emailService = inject(EmailService);
-
-  private readonly env = environment;
   
   @Input() variant: "default" | "dashboard" = "default"
   
