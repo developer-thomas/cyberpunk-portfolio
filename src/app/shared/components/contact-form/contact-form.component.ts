@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } 
 import { NgIcon } from '@ng-icons/core';
 import { TranslatePipe } from '../../pipes/translate.pipe';
 import { EmailService } from '../../services/email.service';
+import { AnalyticsService } from '../../services/analytics.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -14,6 +15,7 @@ import { EmailService } from '../../services/email.service';
 export class ContactFormComponent {
   public fb = inject(FormBuilder);
   private emailService = inject(EmailService);
+  private analyticsService = inject(AnalyticsService);
   
   @Input() variant: "default" | "dashboard" = "default"
   
@@ -42,11 +44,19 @@ export class ContactFormComponent {
 
       await this.emailService.sendAutoReply(name, email);
 
+      // Track successful form submission
+      this.analyticsService.trackFormSubmit('contact_form', true);
+      this.analyticsService.trackContactAttempt(true);
+
       this.isSubmitted = true;
       setTimeout(() => (this.isSubmitted = false), 5000);
       this.form.reset();
     } catch (err) {
       console.error('Erro ao enviar e-mail:', err);
+      
+      // Track failed form submission
+      this.analyticsService.trackFormSubmit('contact_form', false);
+      this.analyticsService.trackContactAttempt(false);
       
     } finally {
       this.isSubmitting = false;

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { NgIcon } from '@ng-icons/core';
+import { AnalyticsService } from '../../services/analytics.service';
 
 @Component({
   selector: 'app-project-card',
@@ -18,6 +19,7 @@ export class ProjectCardComponent implements OnInit {
   @Input() variant!: string;
 
   isHovered = false
+  private analyticsService = inject(AnalyticsService)
 
   ngOnInit(): void {}
 
@@ -27,5 +29,17 @@ export class ProjectCardComponent implements OnInit {
 
   onMouseLeave(): void {
     this.isHovered = false
+  }
+
+  onProjectClick(): void {
+    this.analyticsService.trackProjectView(this.title, this.demoUrl);
+  }
+
+  onGithubClick(): void {
+    this.analyticsService.trackExternalLink(this.githubUrl, 'github');
+  }
+
+  onDemoClick(): void {
+    this.analyticsService.trackExternalLink(this.demoUrl, 'demo');
   }
 }
