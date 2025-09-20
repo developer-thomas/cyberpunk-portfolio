@@ -8,8 +8,9 @@ export async function handler(event, context) {
         body: JSON.stringify({
           service_id: process.env.EMAILJS_SERVICE_ID,
           template_id: process.env.EMAILJS_TEMPLATE_ID,
-          user_id: process.env.EMAILJS_PUBLIC_KEY,
+          publicKey: process.env.EMAILJS_PUBLIC_KEY,   // ✅ chave pública
           template_params: body
+          
         })
       });
   
