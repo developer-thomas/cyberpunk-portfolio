@@ -2,12 +2,23 @@ export async function handler(event, context) {
     try {
       const body = JSON.parse(event.body);
   
+      // Log das variáveis de ambiente para debug (remover em produção)
+      console.log('Variáveis de ambiente disponíveis:');
+      console.log('EMAILJS_SERVICE_ID:', process.env.EMAILJS_SERVICE_ID ? 'DEFINIDA' : 'NÃO DEFINIDA');
+      console.log('EMAILJS_TEMPLATE_ID:', process.env.EMAILJS_TEMPLATE_ID ? 'DEFINIDA' : 'NÃO DEFINIDA');
+      console.log('EMAILJS_PUBLIC_KEY:', process.env.EMAILJS_PUBLIC_KEY ? 'DEFINIDA' : 'NÃO DEFINIDA');
+  
       // Verificar se as variáveis de ambiente estão definidas
-      if (!process.env.EMAILJS_SERVICE_ID || !process.env.EMAILJS_TEMPLATE_ID || !process.env.EMAILJS_PUBLIC_KEY) {
+      const missingVars = [];
+      if (!process.env.EMAILJS_SERVICE_ID) missingVars.push('EMAILJS_SERVICE_ID');
+      if (!process.env.EMAILJS_TEMPLATE_ID) missingVars.push('EMAILJS_TEMPLATE_ID');
+      if (!process.env.EMAILJS_PUBLIC_KEY) missingVars.push('EMAILJS_PUBLIC_KEY');
+  
+      if (missingVars.length > 0) {
         return {
           statusCode: 500,
           body: JSON.stringify({ 
-            error: "Variáveis de ambiente do EmailJS não configuradas. Verifique: EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY" 
+            error: `Variáveis de ambiente não configuradas: ${missingVars.join(', ')}. Configure-as no dashboard do Netlify.` 
           })
         };
       }
