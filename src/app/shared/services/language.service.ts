@@ -138,6 +138,25 @@ const translations: Record<Language, Record<string, string>> = {
     "projects.database": "Project Database",
     "projects.collection": "COLLECTION",
     "projects.viewAll": "View All Projects",
+    
+    // Project Details
+    "projects.neonDashboard.title": "Neon Dashboard",
+    "projects.neonDashboard.description": "A cyberpunk-inspired admin dashboard with dark mode and detailed data visualization, featuring a modern and sleek design.",
+    
+    "projects.eventManagement.title": "Event Management and Ticket Purchase",
+    "projects.eventManagement.description": "A platform featuring an admin panel for event management and a client interface for ticket purchases.",
+    
+    "projects.flightSystem.title": "Flight Reservation, Cargo Transport and Management System",
+    "projects.flightSystem.description": "Application for searching and purchasing flights, with destination search, login, registration, password reset and storage and reservation flow until payment.",
+    
+    "projects.usinaWebsite.title": "Usina Website",
+    "projects.usinaWebsite.description": "A website developed for Usina Enterprise to showcase the company's projects to clients and present the company's services, satisfied clients and more.",
+    
+    "projects.ecommerceManagement.title": "Ecommerce Management",
+    "projects.ecommerceManagement.description": "E-commerce management system, with product control, orders, users, coupons in a complete and efficient interface.",
+    
+    "projects.gymFinder.title": "Gym Finder",
+    "projects.gymFinder.description": "Find and filter SmartFit user data to locate gyms for training, filtering opening, closing and more information about the registered gyms.",
 
     // Skills Section
     "skills.title": "SKILLS",
@@ -165,7 +184,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.form.sent": "Message Sent!",
 
     // Footer
-    "footer.copyright": "Designed & Built with",
+    "footer.copyright": "Designed & Built by Thomas Edson",
 
     // Language Selector
     "lang.en": "English",
@@ -238,6 +257,25 @@ const translations: Record<Language, Record<string, string>> = {
     "projects.database": "Banco de Projetos",
     "projects.collection": "COLEÇÃO",
     "projects.viewAll": "Ver Todos os Projetos",
+    
+    // Project Details
+    "projects.neonDashboard.title": "Neon Dashboard",
+    "projects.neonDashboard.description": "Um painel administrativo inspirado no cyberpunk com modo escuro e visualização detalhada de dados, apresentando um design moderno e elegante.",
+    
+    "projects.eventManagement.title": "Gestão de Eventos e Compra de Ingressos",
+    "projects.eventManagement.description": "Uma plataforma com painel administrativo para gestão de eventos e interface do cliente para compra de ingressos.",
+    
+    "projects.flightSystem.title": "Sistema de Reserva de Vôos, Transporte de Cargas e Gestão",
+    "projects.flightSystem.description": "Aplicação para pesquisa e compra de voos, com busca por destinos, login, cadastro, reset de senha e armazenamento e fluxo de reserva até o pagamento.",
+    
+    "projects.usinaWebsite.title": "Website Usina",
+    "projects.usinaWebsite.description": "Website desenvolvido para a Usina Enterprise para mostrar os projetos da empresa aos clientes e apresentar os serviços da empresa, clientes satisfeitos e muito mais.",
+    
+    "projects.ecommerceManagement.title": "Gestão de E-commerce",
+    "projects.ecommerceManagement.description": "Sistema de gerenciamento de e-commerce, com controle de produtos, pedidos, usuários, cupons em uma interface completa e eficiente.",
+    
+    "projects.gymFinder.title": "Localizador de Academias",
+    "projects.gymFinder.description": "Encontre e filtre dados de usuários SmartFit para localizar academias para treino, filtrando abertura, fechamento e mais informações sobre as academias cadastradas.",
 
     // Skills Section
     "skills.title": "HABILIDADES",
@@ -266,7 +304,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.form.sent": "Mensagem Enviada!",
 
     // Footer
-    "footer.copyright": "Projetado & Construído com",
+    "footer.copyright": "Projetado & Construído por Thomas Edson",
 
     // Language Selector
     "lang.en": "Inglês",
@@ -340,6 +378,25 @@ const translations: Record<Language, Record<string, string>> = {
     "projects.database": "Base de Proyectos",
     "projects.collection": "COLECCIÓN",
     "projects.viewAll": "Ver Todos los Proyectos",
+    
+    // Project Details
+    "projects.neonDashboard.title": "Neon Dashboard",
+    "projects.neonDashboard.description": "Un panel administrativo inspirado en cyberpunk con modo oscuro y visualización detallada de datos, presentando un diseño moderno y elegante.",
+    
+    "projects.eventManagement.title": "Gestión de Eventos y Compra de Entradas",
+    "projects.eventManagement.description": "Una plataforma con panel administrativo para gestión de eventos e interfaz del cliente para compra de entradas.",
+    
+    "projects.flightSystem.title": "Sistema de Reserva de Vuelos, Transporte de Cargas y Gestión",
+    "projects.flightSystem.description": "Aplicación para búsqueda y compra de vuelos, con búsqueda por destinos, login, registro, reset de contraseña y almacenamiento y flujo de reserva hasta el pago.",
+    
+    "projects.usinaWebsite.title": "Sitio Web Usina",
+    "projects.usinaWebsite.description": "Sitio web desarrollado para Usina Enterprise para mostrar los proyectos de la empresa a los clientes y presentar los servicios de la empresa, clientes satisfechos y más.",
+    
+    "projects.ecommerceManagement.title": "Gestión de E-commerce",
+    "projects.ecommerceManagement.description": "Sistema de gestión de comercio electrónico, con control de productos, pedidos, usuarios, cupones en una interfaz completa y eficiente.",
+    
+    "projects.gymFinder.title": "Localizador de Gimnasios",
+    "projects.gymFinder.description": "Encuentra y filtra datos de usuarios SmartFit para localizar gimnasios para entrenar, filtrando apertura, cierre y más información sobre los gimnasios registrados.",
 
     // Skills Section
     "skills.title": "HABILIDADES",
@@ -367,7 +424,7 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.form.sent": "¡Mensaje Enviado!",
 
     // Footer
-    "footer.copyright": "Diseñado & Construido con",
+    "footer.copyright": "Diseñado & Construido por Thomas Edson",
 
     // Language Selector
     "lang.en": "Inglés",

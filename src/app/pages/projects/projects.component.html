@@ -21,8 +21,8 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div *ngFor="let project of projects; let i = index" class="reveal-animation" [style.animation-delay]="0.1 * (i + 1) + 's'">
           <app-project-card
-            [title]="project.title"
-            [description]="project.description"
+            [title]="project.titleKey | translate"
+            [description]="project.descriptionKey | translate"
             [image]="project.image"
             [tags]="project.tags"
             [variant]="project.variant"
