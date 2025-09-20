@@ -1,15 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "dist/cyberpunk-portfolio/browser/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "api/**/*.js",
-      "use": "@vercel/node"
-    }
-  ],
   "routes": [
     {
       "src": "/api/(.*)",
