@@ -5,6 +5,8 @@ import { routes } from './app.routes';
 import { NgIconsModule } from '@ng-icons/core';
 import { lucideUser, lucideSearch } from '@ng-icons/lucide';
 import { icons } from './app.icons'
+import { inject } from "@vercel/analytics"
+
 export const appConfig: ApplicationConfig = {
   providers: [
     icons,

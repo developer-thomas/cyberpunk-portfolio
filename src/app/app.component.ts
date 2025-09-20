@@ -10,6 +10,7 @@ import { ProjectsPageComponent } from './pages/projects/projects.component';
 import { SkillsPageComponent } from './pages/skills-page/skills-page.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { AnalyticsService } from './shared/services/analytics.service';
 
 interface Section {
   id: string
@@ -39,7 +40,7 @@ export class AppComponent implements OnInit {
   activeSection = "hero"
   scrollY = 0
 
-  constructor() {
+  constructor(private analyticsService: AnalyticsService) {
     // Update time every second
     setInterval(() => {
       this.currentTime = new Date()
@@ -47,7 +48,8 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    // Initialize any data or state
+    // Track initial page view
+    this.analyticsService.trackPageView('home');
   }
 
   @HostListener("window:scroll", ["$event"])
@@ -77,6 +79,9 @@ export class AppComponent implements OnInit {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" })
       this.activeSection = id
+      
+      // Track section navigation
+      this.analyticsService.trackButtonClick(`navigate_to_${id}`, 'navigation');
     }
   }
 }
