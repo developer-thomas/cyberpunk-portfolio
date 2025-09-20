@@ -34,6 +34,7 @@
         <a
           [href]="githubUrl"
           target="_blank"
+          (click)="onGithubClick()"
           class="px-3 py-1.5 rounded-md flex items-center text-sm font-medium"
           [ngClass]="variant === 'dashboard' ? 'border-cyan-500 text-cyan-500 hover:bg-cyan-500/10 border' : 'border-yellow-500 text-yellow-500 hover:bg-yellow-500/10 border'"
         >
@@ -43,6 +44,7 @@
         <a
           [href]="demoUrl"
           target="_blank"
+          (click)="onDemoClick()"
           class="px-3 py-1.5 rounded-md flex items-center text-sm font-medium text-black"
           [ngClass]="variant === 'dashboard' ? 'bg-pink-500 hover:bg-pink-600' : 'bg-cyan-500 hover:bg-cyan-600'"
         >

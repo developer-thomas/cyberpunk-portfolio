@@ -4,6 +4,7 @@ import { NgIcon } from '@ng-icons/core';
 import { Subscription } from 'rxjs';
 import { TranslatePipe } from '../../pipes/translate.pipe';
 import { Language, LanguageService } from '../../services/language.service';
+import { AnalyticsService } from '../../services/analytics.service';
 
 @Component({
   selector: 'app-language-selector',
@@ -22,7 +23,10 @@ export class LanguageSelectorComponent implements OnInit, OnDestroy{
     { code: "es", name: "lang.es", image: 'assets/es-flag.png' },
   ]
 
-  constructor(private languageService: LanguageService) {}
+  constructor(
+    private languageService: LanguageService,
+    private analyticsService: AnalyticsService
+  ) {}
 
   ngOnInit(): void {
     this.subscription = this.languageService.currentLanguage$.subscribe((lang) => {
@@ -46,6 +50,7 @@ export class LanguageSelectorComponent implements OnInit, OnDestroy{
 
   setLanguage(lang: Language): void {
     this.languageService.setLanguage(lang)
+    this.analyticsService.trackLanguageChange(lang)
     this.closeDropdown()
   }
 
