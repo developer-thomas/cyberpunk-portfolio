@@ -1,5 +1,7 @@
 {
   "version": 2,
+  "buildCommand": "ng build",
+  "outputDirectory": "dist/cyberpunk-portfolio/browser",
   "routes": [
     {
       "src": "/api/(.*)",
@@ -7,7 +9,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/dist/cyberpunk-portfolio/browser/$1"
+      "dest": "/$1"
     }
   ]
 }
