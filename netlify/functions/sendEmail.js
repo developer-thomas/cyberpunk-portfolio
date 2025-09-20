@@ -29,7 +29,7 @@ export async function handler(event, context) {
       const emailData = {
         service_id: process.env.EMAILJS_SERVICE_ID,
         template_id: process.env.EMAILJS_TEMPLATE_ID,
-        publicKey: publicKey,
+        user_id: publicKey,
         template_params: body
       };
 
