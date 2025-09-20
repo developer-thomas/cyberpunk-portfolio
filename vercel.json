@@ -19,13 +19,5 @@
       "src": "/(.*)",
       "dest": "/dist/cyberpunk-portfolio/browser/$1"
     }
-  ],
-  "functions": {
-    "api/sendEmail.js": {
-      "maxDuration": 10
-    },
-    "api/sendAutoReply.js": {
-      "maxDuration": 10
-    }
-  }
+  ]
 }
