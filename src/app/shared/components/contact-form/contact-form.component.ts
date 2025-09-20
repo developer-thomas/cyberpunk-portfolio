@@ -5,6 +5,7 @@ import { NgIcon } from '@ng-icons/core';
 import { TranslatePipe } from '../../pipes/translate.pipe';
 import emailjs from '@emailjs/browser';
 import { environment } from '../../../../environments/environment.prod'
+import { EmailService } from '../../services/email.service';
 
 interface FormState {
   name: string
@@ -20,6 +21,8 @@ interface FormState {
 })
 export class ContactFormComponent {
   public fb = inject(FormBuilder);
+  private emailService = inject(EmailService);
+
   private readonly env = environment;
   
   @Input() variant: "default" | "dashboard" = "default"
@@ -37,49 +40,26 @@ export class ContactFormComponent {
   isSubmitting = false
   isSubmitted = false
 
-  ngOnInit(): void {}
+  async handleSubmit(): Promise<void> {
+    if (this.form.invalid) return;
 
-  handleSubmit(): void {
-    if (this.form.invalid) {
-      return;
-    }
-  
+    const { name, email } = this.form.value;
+
     this.isSubmitting = true;
-  
-    const { emailJsPublicKey, emailJsServiceId, emailJsTemplateId, emailJsAutoReplyTemplateId } = this.env;
 
-    emailjs.send(
-      emailJsServiceId,
-      emailJsTemplateId,
-      this.form.value,
-      emailJsPublicKey 
-    )
-    .then(() => {
-      // auto-reply para o usuário
-      emailjs.send(
-        emailJsServiceId,
-        emailJsAutoReplyTemplateId,
-        {
-          to_name: this.form.value.name,
-          to_email: this.form.value.email
-        },
-        emailJsPublicKey 
-      )
+    try {
+      await this.emailService.sendEmail(this.form.value);
 
-      this.isSubmitting = false;
-      this.isSubmitted = true; // sucesso
-  
-      // esconde mensagem de sucesso depois de 5s
-      setTimeout(() => {
-        this.isSubmitted = false;
-      }, 5000);
-  
+      await this.emailService.sendAutoReply(name, email);
+
+      this.isSubmitted = true;
+      setTimeout(() => (this.isSubmitted = false), 5000);
       this.form.reset();
-    })
-    .catch((err) => {
+    } catch (err) {
       console.error('Erro ao enviar e-mail:', err);
+      
+    } finally {
       this.isSubmitting = false;
-      alert('Erro ao enviar. Tente novamente.');
-    });
+    }
   }
 }
