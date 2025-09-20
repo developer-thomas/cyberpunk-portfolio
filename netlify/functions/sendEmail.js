@@ -2,17 +2,13 @@ export async function handler(event, context) {
     try {
       const body = JSON.parse(event.body);
   
-      // Log das variáveis de ambiente para debug (remover em produção)
-      console.log('Variáveis de ambiente disponíveis:');
-      console.log('EMAILJS_SERVICE_ID:', process.env.EMAILJS_SERVICE_ID ? 'DEFINIDA' : 'NÃO DEFINIDA');
-      console.log('EMAILJS_TEMPLATE_ID:', process.env.EMAILJS_TEMPLATE_ID ? 'DEFINIDA' : 'NÃO DEFINIDA');
-      console.log('EMAILJS_PUBLIC_KEY:', process.env.EMAILJS_PUBLIC_KEY ? 'DEFINIDA' : 'NÃO DEFINIDA');
+      // Chave pública hardcoded (pode ficar no código)
+      const publicKey = 'gmxYSvVDj8H7pB-9_';
   
       // Verificar se as variáveis de ambiente estão definidas
       const missingVars = [];
       if (!process.env.EMAILJS_SERVICE_ID) missingVars.push('EMAILJS_SERVICE_ID');
       if (!process.env.EMAILJS_TEMPLATE_ID) missingVars.push('EMAILJS_TEMPLATE_ID');
-      if (!process.env.EMAILJS_PUBLIC_KEY) missingVars.push('EMAILJS_PUBLIC_KEY');
   
       if (missingVars.length > 0) {
         return {
@@ -29,7 +25,7 @@ export async function handler(event, context) {
         body: JSON.stringify({
           service_id: process.env.EMAILJS_SERVICE_ID,
           template_id: process.env.EMAILJS_TEMPLATE_ID,
-          publicKey: process.env.EMAILJS_PUBLIC_KEY,
+          publicKey: publicKey,
           template_params: body
         })
       });

@@ -5,12 +5,6 @@ import { NgIcon } from '@ng-icons/core';
 import { TranslatePipe } from '../../pipes/translate.pipe';
 import { EmailService } from '../../services/email.service';
 
-interface FormState {
-  name: string
-  email: string
-  message: string
-}
-
 @Component({
   selector: 'app-contact-form',
   imports: [CommonModule, FormsModule, NgIcon, TranslatePipe, ReactiveFormsModule],
