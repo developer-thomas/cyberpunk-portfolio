@@ -20,4 +20,11 @@ export class HeroPageComponent implements OnInit {
       dashboardElement.scrollIntoView({ behavior: "smooth" })
     }
   }
+
+  scrollToProjects(): void {
+    const projectsElement = document.getElementById("projects")
+    if(projectsElement) {
+      projectsElement.scrollIntoView({ behavior: "smooth"})
+    }
+  }
 }

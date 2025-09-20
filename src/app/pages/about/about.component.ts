@@ -13,4 +13,7 @@ import { TranslatePipe } from '../../shared/pipes/translate.pipe';
 export class AboutPageComponent {
   email = 'thomas.edson@mail.com'
 
+  seeCv() {
+    window.open('https://drive.google.com/file/d/15uHPX6n7plhYQuMo-iEYp94eGk8arJPj/view', '_blank')
+  }
 }

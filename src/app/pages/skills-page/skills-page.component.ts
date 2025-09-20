@@ -16,8 +16,8 @@ export class SkillsPageComponent {
     { name: "Angular / Angular Material", percentage: 95, color: "cyan" },
     { name: "JavaScript / TypeScript", percentage: 90, color: "pink" },
     { name: "SCSS / Tailwind / Bootstrap", percentage: 95, color: "cyan" },
-    { name: "Jest / Cypress", percentage: 80, color: "pink" },
-    { name: "NestJS / Prisma", percentage: 75, color: "cyan" },
+    { name: "Jest / Cypress", percentage: 83, color: "pink" },
+    { name: "NestJS / Prisma", percentage: 90, color: "cyan" },
     { name: "Docker / Azure DevOps", percentage: 85, color: "pink" },
   ]
 
@@ -41,7 +41,7 @@ export class SkillsPageComponent {
   skillMetrics = [
     { value: 95, label: "Front-end Development", color: "cyan" },
     { value: 75, label: "UI/UX Design", color: "pink" },
-    { value: 80, label: "Back-end Development", color: "cyan" },
+    { value: 87, label: "Back-end Development", color: "cyan" },
     { value: 90, label: "Problem Solving", color: "pink" },
   ]
 }

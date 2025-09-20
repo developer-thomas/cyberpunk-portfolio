@@ -21,41 +21,53 @@ export class ProjectsPageComponent implements OnInit{
       description: "A cyberpunk-inspired admin dashboard with dark mode and data visualization.",
       image: "assets/images/neon-city-dashboard.png",
       tags: ["React", "Chart.js", "Tailwind"],
+      demoUrl: "usina-rr.netlify.app",
+      githubUrl: "",
       variant: "dashboard",
     },
     {
-      title: "Digital Marketplace",
-      description: "E-commerce platform for digital assets with crypto payment integration.",
-      image: "assets/images/neon-tech-store.png",
-      tags: ["Next.js", "Stripe", "MongoDB"],
+      title: "Gestão de Eventos e Compra de Ingressos",
+      description: "A platform featuring an admin panel for event management and a client interface for ticket purchases.",
+      image: "assets/projects-images/atocultural.png",
+      tags: ["Angular 17", "Google Maps API", "Payment Checkout", "Tailwind", "Angular Material", "Sass", "API RESTFul"],
+      demoUrl: "https://cidadedacultura.com.br",
+      githubUrl: "https://github.com/developer-thomas/ato-cultural-web",
       variant: "dashboard",
     },
     {
-      title: "Neural Network",
-      description: "Interactive visualization of neural networks with real-time data processing.",
-      image: "assets/images/neon-synapse.png",
-      tags: ["Three.js", "WebGL", "TypeScript"],
+      title: "Gym Finder",
+      description: "Find and filter SmartFit user data to locate gyms for training.",
+      image: "assets/projects-images/smartfit.png",
+      tags: ["Angular 17", "Bootstrap", "Sass", "Leaflet"],
+      demoUrl: "https://smartfit-finder.netlify.app/",
+      githubUrl: "https://github.com/developer-thomas/smartfit-finder",
       variant: "dashboard",
     },
     {
-      title: "Cyber Chat",
-      description: "Real-time chat application with end-to-end encryption and futuristic UI.",
-      image: "assets/images/neon-city-chat.png",
-      tags: ["Firebase", "React", "Socket.io"],
+      title: "Usina Website",
+      description: "A website developed for Usina Enterprise to showcase the company's projects to clients.",
+      image: "assets/projects-images/usina.png",
+      demoUrl: "https://usina-rr.netlify.app/",
+      tags: ["Angular 16", "Bootstrap", "Sass", "Leaflet"],
+      githubUrl: "https://github.com/developer-thomas/usina-website",
       variant: "dashboard",
     },
     {
-      title: "Augmented Portfolio",
+      title: "Compra de passagens aéreas",
       description: "AR-enabled portfolio website with interactive 3D elements.",
-      image: "assets/images/neon-cityscape-ar.png",
-      tags: ["AR.js", "Three.js", "GSAP"],
+      image: "assets/projects-images/mobair.png",
+      tags: ["Angular 16", "API RESTFul", "Angular Material", "Tailwind", "Sweetalert2" ],
+      demoUrl: "https://mobair.com.br",
+      githubUrl: "https://github.com/developer-thomas/airbus-ticket-system",
       variant: "dashboard",
     },
     {
-      title: "Neon City Guide",
+      title: "Ecommerce Management",
       description: "Interactive city guide with cyberpunk aesthetics and location-based features.",
-      image: "assets/images/neon-grid-city.png",
-      tags: ["Mapbox", "React", "Geolocation API"],
+      image: "assets/projects-images/ecommerce.png",
+      tags: ["Angular 17", "Tailwind", "Angular Material", "Sass"],
+      demoUrl: "https://usina-rr.netlify.app",
+      githubUrl: "",
       variant: "dashboard",
     },
   ]
@@ -63,4 +75,8 @@ export class ProjectsPageComponent implements OnInit{
   constructor() {}
 
   ngOnInit(): void {}
+
+  goToGithub() {
+    window.open('https://github.com/developer-thomas?tab=repositories', "_blank")
+  }
 }

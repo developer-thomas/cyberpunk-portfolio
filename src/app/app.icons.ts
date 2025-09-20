@@ -16,7 +16,8 @@ import {
   lucideArrowUpRight,
   lucideArrowDown,
   lucideServer,
-  lucideArrowUp 
+  lucideArrowUp,
+  lucideInstagram
 } from '@ng-icons/lucide';
 
 export const icons = provideIcons({
@@ -36,7 +37,8 @@ export const icons = provideIcons({
   lucideArrowUpRight,
   lucideArrowDown,
   lucideServer,
-  lucideArrowUp 
+  lucideArrowUp,
+  lucideInstagram
 
 });
 

@@ -13,8 +13,8 @@ export class ProjectCardComponent implements OnInit {
   @Input() description = ""
   @Input() image = ""
   @Input() tags: string[] = []
-  @Input() githubUrl = "#"
-  @Input() demoUrl = "#"
+  @Input() githubUrl!: string;
+  @Input() demoUrl!: string;
   @Input() variant!: string;
 
   isHovered = false

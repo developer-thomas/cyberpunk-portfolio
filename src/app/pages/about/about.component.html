@@ -26,25 +26,25 @@
 
             <div class="flex justify-center md:justify-start gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/developer-thomas"
                 target="_blank"
                 class="text-gray-400 hover:text-cyan-400 transition-colors"
               >
                 <ng-icon name="lucideGithub" class="w-5 h-5"></ng-icon>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/thomas-edson-dev"
                 target="_blank"
                 class="text-gray-400 hover:text-pink-400 transition-colors"
               >
                 <ng-icon name="lucideLinkedin" class="w-5 h-5"></ng-icon>
               </a>
               <a
-                href="https://twitter.com"
+                href="https://instagram.com/thomas.devp"
                 target="_blank"
                 class="text-gray-400 hover:text-cyan-400 transition-colors"
               >
-                <ng-icon name="lucideTwitter" class="w-5 h-5"></ng-icon>
+                <ng-icon name="lucideInstagram" class="w-5 h-5"></ng-icon>
               </a>
             </div>
           </div>
@@ -82,7 +82,9 @@
           </div>
 
           <div class="mt-6">
-            <button class="bg-cyan-500 hover:bg-cyan-600 text-black px-4 py-2 rounded-md">
+            <button 
+              (click)="seeCv()"
+              class="bg-cyan-500 hover:bg-cyan-600 text-black px-4 py-2 rounded-md">
               {{ 'about.resume' | translate }}
             </button>
           </div>

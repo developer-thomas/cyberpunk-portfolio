@@ -85,14 +85,14 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero Section
     "hero.title": "CYBER_DEV",
     "hero.subtitle":
-      "Creating cutting-edge digital experiences with code. Specializing in modern front-end development and interactive web applications.",
+      "Creating cutting-edge digital experiences with code. Specializing in modern front-end, back-end and full-stack.",
     "hero.cta.explore": "Explore Dashboard",
     "hero.cta.projects": "View Projects",
     "hero.scroll": "Scroll Down",
 
     // Dashboard Section
     "dashboard.title": "DASHBOARD",
-    "dashboard.subtitle": "Front-end Developer | UI/UX Designer | Web3 Enthusiast",
+    "dashboard.subtitle": "Front-end Developer | Back-end Developer | Full-Stack",
     "dashboard.stats.experience": "Experience",
     "dashboard.stats.projects": "Projects",
     "dashboard.stats.technologies": "Technologies",
@@ -113,19 +113,22 @@ const translations: Record<Language, Record<string, string>> = {
     // About Section
     "about.title": "PROFILE",
     "about.subtitle": "ABOUT ME",
-    "about.p1":
-      "I'm a front-end developer with a passion for creating immersive digital experiences. With a background in design and a love for clean code, I bridge the gap between aesthetics and functionality.",
-    "about.p2":
-      "My journey in web development started 5 years ago, and I've been pushing the boundaries of what's possible on the web ever since. I specialize in React, Next.js, and modern JavaScript, with a focus on performance and accessibility.",
-    "about.p3":
-      "When I'm not coding, you can find me exploring cyberpunk literature, creating digital art, or tinkering with new technologies.",
+    "about.p1": 
+      "I am a Software Engineer and passionate developer focused on building robust and scalable digital solutions. My journey began in the Brazilian Navy, where I first worked as an IT Analyst and later transitioned to front-end development with Angular.",
+
+    "about.p2": 
+      "Since then, I have expanded my experience at companies such as Código Certo Coders and IpêCode, working both on the front-end (React, Styled Components) and back-end (NestJS, MySQL), always aiming for performance and quality.",
+
+    "about.p3": 
+      "Today, I work at Crosoften, a software house where I lead teams and design architectures for projects of different scales — from e-commerce platforms to ERPs and hospital management systems. This diversity strengthens my full-stack perspective and enables me to deliver solutions that combine innovation, scalability, and real business impact.",
+
     "about.role": "FRONT-END DEVELOPER",
     "about.location.label": "LOCATION",
-    "about.location.value": "Neo Tokyo, Japan",
+    "about.location.value": "Porto, Portugal",
     "about.experience.label": "EXPERIENCE",
-    "about.experience.value": "5+ Years",
+    "about.experience.value": "3+ Years",
     "about.email.label": "EMAIL",
-    "about.email.value": "contact@cyberdev.com",
+    "about.email.value": "thomas.edson@mail.com",
     "about.availability.label": "AVAILABILITY",
     "about.availability.value": "Available for Hire",
     "about.resume": "Download Resume",
@@ -150,9 +153,9 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.title": "CONTACT",
     "contact.getInTouch": "GET IN TOUCH",
     "contact.interested": "Interested in working together? Have a project in mind? Feel free to reach out!",
-    "contact.email": "contact@cyberdev.com",
-    "contact.discord": "Discord: cyberdev#1337",
-    "contact.website": "www.cyberdev.com",
+    "contact.email": "thomas.edson@mail.com",
+    "contact.discord": "Discord: ThomasEdson#0999",
+    "contact.website": "www.thomas-developer.com",
     "contact.sendMessage": "SEND MESSAGE",
     "contact.form.name": "NAME",
     "contact.form.email": "EMAIL",
@@ -183,14 +186,14 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero Section
     "hero.title": "CYBER_DEV",
     "hero.subtitle":
-      "Criando experiências digitais de ponta com código. Especializado em desenvolvimento front-end moderno e aplicações web interativas.",
+      "Criando experiências digitais de ponta com código. Especializado em desenvolvimento front-end, back end e full stack.",
     "hero.cta.explore": "Explorar Painel",
     "hero.cta.projects": "Ver Projetos",
     "hero.scroll": "Rolar para Baixo",
 
     // Dashboard Section
     "dashboard.title": "PAINEL",
-    "dashboard.subtitle": "Desenvolvedor Front-end | Designer UI/UX | Entusiasta Web3",
+    "dashboard.subtitle": "Desenvolvedor Front-end | Back-end Developer | Full-Stack",
     "dashboard.stats.experience": "Experiência",
     "dashboard.stats.projects": "Projetos",
     "dashboard.stats.technologies": "Tecnologias",
@@ -211,19 +214,21 @@ const translations: Record<Language, Record<string, string>> = {
     // About Section
     "about.title": "PERFIL",
     "about.subtitle": "SOBRE MIM",
-    "about.p1":
-      "Sou um desenvolvedor front-end apaixonado por criar experiências digitais imersivas. Com formação em design e amor por código limpo, faço a ponte entre estética e funcionalidade.",
-    "about.p2":
-      "Minha jornada no desenvolvimento web começou há 5 anos, e desde então venho expandindo os limites do que é possível na web. Sou especializado em React, Next.js e JavaScript moderno, com foco em desempenho e acessibilidade.",
-    "about.p3":
-      "Quando não estou codificando, você pode me encontrar explorando literatura cyberpunk, criando arte digital ou experimentando novas tecnologias.",
+    "about.p1": 
+      "Sou engenheiro de software e desenvolvedor apaixonado por criar soluções digitais robustas e escaláveis. Minha trajetória começou na Marinha do Brasil, onde atuei primeiro como analista de TI e depois migrei para o desenvolvimento front-end com Angular.",
+    "about.p2": 
+      "Desde então, ampliei minha experiência em empresas como Código Certo Coders e IpêCode, trabalhando tanto no front-end (React, Styled Components) quanto no back-end (NestJS, MySQL), sempre com foco em performance e qualidade.",
+
+    "about.p3": 
+      "Hoje, atuo na Crosoften, uma software house onde lidero equipes e desenho arquiteturas para projetos de diferentes portes — de e-commerces a ERPs e sistemas de gestão hospitalar. Essa diversidade fortalece minha visão full stack e me permite entregar soluções que unem inovação, escalabilidade e impacto real para os negócios."
+,
     "about.role": "DESENVOLVEDOR FRONT-END",
     "about.location.label": "LOCALIZAÇÃO",
-    "about.location.value": "Neo Tóquio, Japão",
+    "about.location.value": "Porto, Portugal",
     "about.experience.label": "EXPERIÊNCIA",
-    "about.experience.value": "5+ Anos",
+    "about.experience.value": "3+ Anos",
     "about.email.label": "EMAIL",
-    "about.email.value": "contato@cyberdev.com",
+    "about.email.value": "thomas.edson@mail.com",
     "about.availability.label": "DISPONIBILIDADE",
     "about.availability.value": "Disponível para Contratação",
     "about.resume": "Baixar Currículo",
@@ -249,9 +254,9 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.getInTouch": "ENTRE EM CONTATO",
     "contact.interested":
       "Interessado em trabalhar junto? Tem um projeto em mente? Sinta-se à vontade para entrar em contato!",
-    "contact.email": "contato@cyberdev.com",
-    "contact.discord": "Discord: cyberdev#1337",
-    "contact.website": "www.cyberdev.com",
+    "contact.email": "thomas.edson@mail.com",
+    "contact.discord": "Discord: ThomasEdson#0999",
+    "contact.website": "www.thomas-developer.com",
     "contact.sendMessage": "ENVIAR MENSAGEM",
     "contact.form.name": "NOME",
     "contact.form.email": "EMAIL",
@@ -282,14 +287,14 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero Section
     "hero.title": "CYBER_DEV",
     "hero.subtitle":
-      "Creando experiencias digitales de vanguardia con código. Especializado en desarrollo front-end moderno y aplicaciones web interactivas.",
+      "Creando experiencias digitales de vanguardia con código. Especializado en desarrollo front-end moderno, back-end y full-stack.",
     "hero.cta.explore": "Explorar Panel",
     "hero.cta.projects": "Ver Proyectos",
     "hero.scroll": "Desplazar Abajo",
 
     // Dashboard Section
     "dashboard.title": "PANEL",
-    "dashboard.subtitle": "Desarrollador Front-end | Diseñador UI/UX | Entusiasta Web3",
+    "dashboard.subtitle": "Desarrollador Front-end | Back-end Developer | Full-Stack",
     "dashboard.stats.experience": "Experiencia",
     "dashboard.stats.projects": "Proyectos",
     "dashboard.stats.technologies": "Tecnologías",
@@ -310,19 +315,22 @@ const translations: Record<Language, Record<string, string>> = {
     // About Section
     "about.title": "PERFIL",
     "about.subtitle": "SOBRE MÍ",
-    "about.p1":
-      "Soy un desarrollador front-end apasionado por crear experiencias digitales inmersivas. Con formación en diseño y amor por el código limpio, hago el puente entre estética y funcionalidad.",
-    "about.p2":
-      "Mi viaje en el desarrollo web comenzó hace 5 años, y desde entonces he estado expandiendo los límites de lo que es posible en la web. Me especializo en React, Next.js y JavaScript moderno, con enfoque en rendimiento y accesibilidad.",
-    "about.p3":
-      "Cuando no estoy programando, puedes encontrarme explorando literatura cyberpunk, creando arte digital o experimentando con nuevas tecnologías.",
-    "about.role": "DESARROLLADOR FRONT-END",
+    "about.p1": 
+      "Soy ingeniero de software y desarrollador apasionado por crear soluciones digitales sólidas y escalables. Mi trayectoria comenzó en la Marina de Brasil, donde trabajé primero como analista de TI y luego pasé al desarrollo front-end con Angular.",
+
+    "about.p2": 
+      "Desde entonces, amplié mi experiencia en empresas como Código Certo Coders e IpêCode, trabajando tanto en el front-end (React, Styled Components) como en el back-end (NestJS, MySQL), siempre enfocado en el rendimiento y la calidad.",
+
+    "about.p3": 
+      "Actualmente trabajo en Crosoften, una software house donde lidero equipos y diseño arquitecturas para proyectos de distintos tamaños — desde plataformas de comercio electrónico hasta ERPs y sistemas de gestión hospitalaria. Esta diversidad fortalece mi visión full stack y me permite entregar soluciones que combinan innovación, escalabilidad e impacto real en los negocios."
+,
+  "about.role": "DESARROLLADOR FRONT-END",
     "about.location.label": "UBICACIÓN",
-    "about.location.value": "Neo Tokio, Japón",
+    "about.location.value": "Porto, Portugal",
     "about.experience.label": "EXPERIENCIA",
-    "about.experience.value": "5+ Años",
+    "about.experience.value": "3+ Años",
     "about.email.label": "EMAIL",
-    "about.email.value": "contacto@cyberdev.com",
+    "about.email.value": "thomas.edson@mail.com",
     "about.availability.label": "DISPONIBILIDAD",
     "about.availability.value": "Disponible para Contratar",
     "about.resume": "Descargar Currículum",
@@ -347,9 +355,9 @@ const translations: Record<Language, Record<string, string>> = {
     "contact.title": "CONTACTO",
     "contact.getInTouch": "PONTE EN CONTACTO",
     "contact.interested": "¿Interesado en trabajar juntos? ¿Tienes un proyecto en mente? ¡No dudes en contactarme!",
-    "contact.email": "contacto@cyberdev.com",
-    "contact.discord": "Discord: cyberdev#1337",
-    "contact.website": "www.cyberdev.com",
+    "contact.email": "thomas.edson@mail.com",
+    "contact.discord": "Discord: ThomasEdson#0999",
+    "contact.website": "www.thomas-developer.com",
     "contact.sendMessage": "ENVIAR MENSAJE",
     "contact.form.name": "NOMBRE",
     "contact.form.email": "EMAIL",

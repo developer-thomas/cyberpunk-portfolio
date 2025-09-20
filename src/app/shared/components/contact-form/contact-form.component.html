@@ -1,4 +1,4 @@
-<form (ngSubmit)="handleSubmit()" class="space-y-4">
+<form [formGroup]="form" (ngSubmit)="handleSubmit()" class="space-y-4">
   <div class="space-y-2">
     <label for="name" class="text-sm font-mono text-gray-400">
       {{ 'contact.form.name' | translate }}
@@ -6,7 +6,7 @@
     <input
       id="name"
       name="name"
-      [(ngModel)]="formState.name"
+      formControlName="name"
       required
       [ngClass]="variant === 'dashboard'
         ? 'bg-[#0a0b10] border-cyan-500/30 focus:border-pink-500'
@@ -24,7 +24,7 @@
       id="email"
       name="email"
       type="email"
-      [(ngModel)]="formState.email"
+      formControlName="email"
       required
       [ngClass]="variant === 'dashboard'
         ? 'bg-[#0a0b10] border-cyan-500/30 focus:border-pink-500'
@@ -41,7 +41,7 @@
     <textarea
       id="message"
       name="message"
-      [(ngModel)]="formState.message"
+      formControlName="message"
       required
       [ngClass]="variant === 'dashboard'
         ? 'bg-[#0a0b10] border-cyan-500/30 focus:border-pink-500'

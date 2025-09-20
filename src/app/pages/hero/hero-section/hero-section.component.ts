@@ -24,6 +24,8 @@ interface Particle {
 })
 export class HeroSectionComponent implements OnInit, AfterViewInit, OnDestroy{
   @Output() explore = new EventEmitter<void>()
+  @Output() exploreProjects = new EventEmitter<void>();
+
   @ViewChild("canvas") canvasRef!: ElementRef<HTMLCanvasElement>
 
   isLoaded = false
@@ -191,6 +193,10 @@ export class HeroSectionComponent implements OnInit, AfterViewInit, OnDestroy{
   }
 
   onExplore(): void {
-    this.explore.emit()
+    this.explore.emit();
+  }
+
+  onExploreProjects():void {
+    this.exploreProjects.emit();
   }
 }

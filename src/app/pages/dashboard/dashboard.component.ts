@@ -18,7 +18,7 @@ export class DashboardPageComponent {
   stats = [
     {
       title: "dashboard.stats.experience",
-      value: "3+ Years",
+      value: "3+",
       icon: 'lucideActivity',
       trend: "+15%",
       trendUp: true,
@@ -39,10 +39,10 @@ export class DashboardPageComponent {
     },
     {
       title: "dashboard.stats.uptime",
-      value: "85.0%",
+      value: "100%",
       icon: 'lucideServer',
-      trend: "0.1%",
-      trendUp: false,
+      trend: "10%",
+      trendUp: true,
     },
   ]
 
@@ -54,6 +54,13 @@ export class DashboardPageComponent {
     const aboutElement = document.getElementById("about")
     if (aboutElement) {
       aboutElement.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
+  scrollToContact(): void {
+    const contactElement = document.getElementById('contact');
+    if(contactElement) {
+      contactElement.scrollIntoView({ behavior: "smooth"})
     }
   }
 }

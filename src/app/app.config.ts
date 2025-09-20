@@ -13,8 +13,7 @@ export const appConfig: ApplicationConfig = {
     importProvidersFrom(
       NgIconsModule.withIcons({
         lucideUser,
-        lucideSearch,
-        // adicione outros ícones aqui
+        lucideSearch
       })
     )
   ]
