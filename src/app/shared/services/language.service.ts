@@ -115,16 +115,14 @@ const translations: Record<Language, Record<string, string>> = {
     "about.subtitle": "ABOUT ME",
     "about.p1": 
       "I am a Software Engineer and passionate developer focused on building robust and scalable digital solutions. My journey began in the Brazilian Navy, where I first worked as an IT Analyst and later transitioned to front-end development with Angular.",
-
     "about.p2": 
-      "Since then, I have expanded my experience at companies such as Código Certo Coders and IpêCode, working both on the front-end (React, Styled Components) and back-end (NestJS, MySQL), always aiming for performance and quality.",
+      "Since then, I have expanded my experience at companies such as IpêCode and Crosoften, working both on the front-end (Angular, Vue & Ionic) and back-end (NestJS, MySQL), always aiming for performance and quality.",
 
     "about.p3": 
-      "Today, I work at Crosoften, a software house where I lead teams and design architectures for projects of different scales — from e-commerce platforms to ERPs and hospital management systems. This diversity strengthens my full-stack perspective and enables me to deliver solutions that combine innovation, scalability, and real business impact.",
-
+    "I currently work at BUSPAY, a company that manages bus ticket payments for urban transportation in Greater São Paulo and intercity travel across Brazil. I’m part of a multidisciplinary team responsible for driving the bus ticket e-commerce, road transport management systems, and end-user platforms.",
     "about.role": "FRONT-END DEVELOPER",
     "about.location.label": "LOCATION",
-    "about.location.value": "Manaus, Brasil",
+    "about.location.value": "Florianópolis, Brasil",
     "about.experience.label": "EXPERIENCE",
     "about.experience.value": "3+ Years",
     "about.email.label": "EMAIL",
@@ -236,14 +234,12 @@ const translations: Record<Language, Record<string, string>> = {
     "about.p1": 
       "Sou engenheiro de software e desenvolvedor apaixonado por criar soluções digitais robustas e escaláveis. Minha trajetória começou na Marinha do Brasil, onde atuei primeiro como analista de TI e depois migrei para o desenvolvimento front-end com Angular.",
     "about.p2": 
-      "Desde então, ampliei minha experiência em empresas como Código Certo Coders e IpêCode, trabalhando tanto no front-end (React, Styled Components) quanto no back-end (NestJS, MySQL), sempre com foco em performance e qualidade.",
-
+      "Desde então, ampliei minha experiência em empresas como Crosoften e IpêCode, trabalhando tanto no front-end (Angular, Vue e Ionic) quanto no back-end (NestJS, MySQL), sempre com foco em performance e qualidade.",
     "about.p3": 
-      "Hoje, atuo na Crosoften, uma software house onde lidero equipes e desenho arquiteturas para projetos de diferentes portes — de e-commerces a ERPs e sistemas de gestão hospitalar. Essa diversidade fortalece minha visão full stack e me permite entregar soluções que unem inovação, escalabilidade e impacto real para os negócios."
-,
+      "Atualmente, trabalho na BUSPAY, uma empresa que gerencia os pagamentos de passagens de ônibus no transporte urbano da Grande São Paulo e em viagens interestaduais por todo o Brasil. Atuo em uma equipe multidisciplinar responsável por impulsionar o e-commerce de passagens, o gerenciamento de sistemas rodoviários e as plataformas de usuários finais.",
     "about.role": "DESENVOLVEDOR FRONT-END",
     "about.location.label": "LOCALIZAÇÃO",
-    "about.location.value": "Manaus, Brasil",
+    "about.location.value": "Florianópolis, Brasil",
     "about.experience.label": "EXPERIÊNCIA",
     "about.experience.value": "3+ Anos",
     "about.email.label": "EMAIL",
@@ -357,14 +353,12 @@ const translations: Record<Language, Record<string, string>> = {
       "Soy ingeniero de software y desarrollador apasionado por crear soluciones digitales sólidas y escalables. Mi trayectoria comenzó en la Marina de Brasil, donde trabajé primero como analista de TI y luego pasé al desarrollo front-end con Angular.",
 
     "about.p2": 
-      "Desde entonces, amplié mi experiencia en empresas como Código Certo Coders e IpêCode, trabajando tanto en el front-end (React, Styled Components) como en el back-end (NestJS, MySQL), siempre enfocado en el rendimiento y la calidad.",
-
+      "Desde entonces, amplié mi experiencia en empresas como Crosoften e IpêCode, trabajando tanto en el front-end (Angular, Vue y Ionic) como en el back-end (NestJS, MySQL), siempre enfocado en el rendimiento y la calidad.",
     "about.p3": 
-      "Actualmente trabajo en Crosoften, una software house donde lidero equipos y diseño arquitecturas para proyectos de distintos tamaños — desde plataformas de comercio electrónico hasta ERPs y sistemas de gestión hospitalaria. Esta diversidad fortalece mi visión full stack y me permite entregar soluciones que combinan innovación, escalabilidad e impacto real en los negocios."
-,
-  "about.role": "DESARROLLADOR FRONT-END",
+    "Actualmente trabajo en BUSPAY, una empresa que gestiona los pagos de boletos de autobús en el transporte urbano del Gran São Paulo y en los viajes interurbanos en todo Brasil. Formo parte de un equipo multidisciplinario encargado de impulsar el comercio electrónico de boletos, la gestión de sistemas de transporte terrestre y las plataformas de usuarios finales.",
+    "about.role": "DESARROLLADOR FRONT-END",  
     "about.location.label": "UBICACIÓN",
-    "about.location.value": "Manaus, Brasil",
+    "about.location.value": "Florianópolis, Brasil",
     "about.experience.label": "EXPERIENCIA",
     "about.experience.value": "3+ Años",
     "about.email.label": "EMAIL",

@@ -57,8 +57,8 @@ export class ProjectsPageComponent implements OnInit{
       descriptionKey: "projects.ecommerceManagement.description",
       image: "assets/projects-images/ecommerce.png",
       tags: ["Angular 17", "Tailwind", "Angular Material", "Sass"],
-      demoUrl: "https://github.com/developer-thomas/ecommerce-management",
-      githubUrl: "https://ecommerce-management-admin.vercel.app",
+      demoUrl: "https://ecommerce-management-admin.vercel.app",
+      githubUrl: "https://github.com/developer-thomas/ecommerce-management",
       variant: "dashboard",
     },
     {
